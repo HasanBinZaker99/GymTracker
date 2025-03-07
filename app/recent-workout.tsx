@@ -18,7 +18,7 @@ export default function RecentWorkouts() {
       try {
         const currentDate = new Date().toISOString().split("T")[0]; // Get today's date
         const response = await fetch(
-          `https://gymtracker1.onrender.com/recent-workout?email=${email}&date=${currentDate}`
+          `https://gymtracker-2.onrender.com/recent-workout?email=${email}&date=${currentDate}`
         );
         const data = await response.json();
 

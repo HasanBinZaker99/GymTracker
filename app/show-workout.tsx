@@ -13,7 +13,7 @@ import axios from "axios";
 import moment from "moment";
 import { useRouter } from "expo-router"; // Navigation fix for Expo Router
 
-const API_URL = "https://gymtracker1.onrender.com"; // Replace with your actual API URL
+const API_URL = "https://gymtracker-2.onrender.com"; // Replace with your actual API URL
 
 interface Workout {
   workout: string;
