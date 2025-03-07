@@ -6,7 +6,7 @@ import { useRouter } from "expo-router";
 import moment from "moment";
 import axios from "axios";
 
-const API_URL = "http://192.168.2.68:3000"; // Replace with actual API URL
+const API_URL = "https://gymtracker1.onrender.com"; // Replace with actual API URL
 
 export default function CreateWorkout() {
   const router = useRouter();

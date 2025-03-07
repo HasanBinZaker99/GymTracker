@@ -1,9 +1,9 @@
 {
   "name": "loginapp",
-  "main": "server.js",
+  "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -55,9 +55,6 @@
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.5",
     "react-navigation": "^5.0.0"
-  },
-  "engines": {
-    "node": "16.x"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

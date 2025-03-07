@@ -11,11 +11,14 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch("http://localhost:3000/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://gymtracker1.onrender.com/register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
       if (response.status === 201) {
@@ -35,11 +38,12 @@ export default function Register() {
       <TextInput
         style={styles.input}
         placeholder="Enter Email"
-        value={email}
+        value={email as string} // ✅ Ensures value is always a string
         onChangeText={setEmail}
         keyboardType="email-address"
         autoCapitalize="none"
       />
+
       <TextInput
         style={styles.input}
         placeholder="Enter Password"
