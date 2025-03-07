@@ -11,14 +11,11 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch(
-        "https://gymtracker1.onrender.com/register",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const response = await fetch("https://gymtracker1.onrender.com/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
       const data = await response.json();
       if (response.status === 201) {

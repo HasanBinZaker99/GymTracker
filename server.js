@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 const uri =
   "mongodb+srv://mdhbz99d:plyPbyF3GGqBFKw4@cluster0.c1urh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -240,5 +240,5 @@ app.get("/recent-workout", async (req, res) => {
   }
 });
 // Start Server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
