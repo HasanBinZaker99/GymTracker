@@ -116,7 +116,8 @@ app.post("/save-workout", async (req, res) => {
   try {
     const { email, workouts, date, time } = req.body;
 
-    if (!email || !workouts || !date || !time || !Array.isArray(workouts)) {
+    if (!email || !workouts || !date || !time) {
+      console.log("❌ Invalid request data received:", req.body);
       return res.status(400).json({ message: "Invalid request data" });
     }
 
@@ -240,5 +241,5 @@ app.get("/recent-workout", async (req, res) => {
   }
 });
 // Start Server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

@@ -83,11 +83,12 @@ export default function CreateWorkout() {
     console.log("Workout Data Sending:", workoutData);
 
     try {
+      console.log(workoutData);
       const response = await axios.post<{ message: string }>(
         `${API_URL}/save-workout`,
         workoutData
       );
-
+      console.log(response.data);
       if (
         response.status === 200 &&
         response.data.message === "You already checked this workout!"
